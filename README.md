@@ -35,5 +35,5 @@ Swift 5
 ![EditTheme](https://user-images.githubusercontent.com/58611737/129268800-f1205e4b-21f5-4afd-af50-8de0024b95d4.gif)
 
 #### Delete theme
-![DeleteTheme](https://user-images.githubusercontent.com/58611737/129270506-51b53604-d3fb-49f4-b08f-134fba9479d2.gif)
+![DeleteTheme](https://user-images.githubusercontent.com/58611737/129271116-ceec8e70-b4f8-4b04-878d-a32ef2eb4257.gif)
 
