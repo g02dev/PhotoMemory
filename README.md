@@ -1,5 +1,17 @@
 # PhotoMemory
 
+## Preview
+#### Settings
+![Settings](https://user-images.githubusercontent.com/58611737/129226809-d5954897-5434-471d-bac7-709ceb7f8425.gif)
+
+#### Game
+![Game](https://user-images.githubusercontent.com/58611737/129227052-7df45446-240f-4098-83fe-a8d37f9d8e8c.gif)
+
+
+
+## Steps
+
+
 0. Launch the app
 <img width="250" alt="" src="https://user-images.githubusercontent.com/58611737/129202201-9aa47411-0ff8-4c93-8fc7-18a336074ec6.png">
 
