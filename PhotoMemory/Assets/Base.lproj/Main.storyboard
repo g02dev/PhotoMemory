@@ -18,25 +18,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="5Kg-3e-Vv8">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="5Kg-3e-Vv8">
                                 <rect key="frame" x="0.0" y="88" width="414" height="700"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PreviewCell" rowHeight="202" id="6gg-pP-SAY" customClass="PreviewTableViewCell" customModule="PhotoMemory" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="49.5" width="414" height="202"/>
+                                        <rect key="frame" x="20" y="49.5" width="374" height="202"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6gg-pP-SAY" id="PLK-RP-Ok0">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="202"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="202"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TestImage" translatesAutoresizingMaskIntoConstraints="NO" id="Kj1-vh-Y4K">
-                                                    <rect key="frame" x="131.5" y="11" width="151" height="151"/>
+                                                    <rect key="frame" x="111.5" y="11" width="151" height="151"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="Kj1-vh-Y4K" secondAttribute="height" multiplier="1:1" id="grd-VJ-xJz"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="42 pairs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQx-q8-B7U">
-                                                    <rect key="frame" x="20" y="166" width="374" height="25"/>
+                                                    <rect key="frame" x="20" y="166" width="334" height="25"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="25" id="5bq-OE-eka"/>
                                                     </constraints>
@@ -61,10 +60,10 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SettingCell" textLabel="hor-sf-Fdh" detailTextLabel="KUh-8I-jXB" rowHeight="58" style="IBUITableViewCellStyleValue1" id="hZq-WL-FxO">
-                                        <rect key="frame" x="0.0" y="251.5" width="414" height="58"/>
+                                        <rect key="frame" x="20" y="251.5" width="374" height="58"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hZq-WL-FxO" id="pdG-cJ-OKN">
-                                            <rect key="frame" x="0.0" y="0.0" width="384.5" height="58"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="344.5" height="58"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Difficulty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hor-sf-Fdh">
@@ -75,7 +74,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Hard" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KUh-8I-jXB">
-                                                    <rect key="frame" x="339.5" y="19" width="37" height="20.5"/>
+                                                    <rect key="frame" x="299.5" y="19" width="37" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -102,7 +101,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="yLa-cQ-pJd"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="5Kg-3e-Vv8" firstAttribute="top" secondItem="yLa-cQ-pJd" secondAttribute="top" id="2UC-Jr-F9w"/>
                             <constraint firstItem="5Kg-3e-Vv8" firstAttribute="leading" secondItem="yLa-cQ-pJd" secondAttribute="leading" id="6lv-bz-2Er"/>
@@ -342,16 +341,15 @@
         <scene sceneID="2BQ-cS-mLa">
             <objects>
                 <tableViewController id="AtK-qG-bfN" customClass="ThemeSelectionTableViewController" customModule="PhotoMemory" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="c5e-6R-p9W">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="c5e-6R-p9W">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ThemeCell" rowHeight="114" id="Sbv-gU-AnP" customClass="ThemeTableViewCell" customModule="PhotoMemory" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="49.5" width="414" height="114"/>
+                                <rect key="frame" x="20" y="49.5" width="374" height="114"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Sbv-gU-AnP" id="UZ1-Zh-ibq">
-                                    <rect key="frame" x="0.0" y="0.0" width="384.5" height="114"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="344.5" height="114"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JLS-2i-XyM">
@@ -361,7 +359,7 @@
                                             </constraints>
                                         </imageView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="qQN-zX-vTI">
-                                            <rect key="frame" x="120" y="33.5" width="256.5" height="47"/>
+                                            <rect key="frame" x="120" y="33.5" width="216.5" height="47"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Animals" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W4s-uC-iTh">
                                                     <rect key="frame" x="0.0" y="0.0" width="67" height="23"/>
@@ -394,14 +392,14 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="NoCustomThemesCell" textLabel="DOz-YN-8aL" rowHeight="55" style="IBUITableViewCellStyleDefault" id="nRX-wj-aSa">
-                                <rect key="frame" x="0.0" y="163.5" width="414" height="55"/>
+                                <rect key="frame" x="20" y="163.5" width="374" height="55"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nRX-wj-aSa" id="ofk-rY-b5q">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="55"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="55"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Tap + to create your first theme" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DOz-YN-8aL">
-                                            <rect key="frame" x="20" y="0.0" width="374" height="55"/>
+                                            <rect key="frame" x="20" y="0.0" width="334" height="55"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                             <color key="textColor" systemColor="systemGrayColor"/>
@@ -409,6 +407,7 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -818,6 +817,9 @@
         </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemTealColor">
             <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
