@@ -25,7 +25,7 @@ struct UnsplashClient {
             let decoder = JSONDecoder()
 
             if let responseObject = try? decoder.decode(SearchResponse.self, from: data) {
-                let urls = responseObject.results.compactMap{ URL(string:$0.urls.regular) }
+                let urls = responseObject.results.compactMap{ URL(string:$0.urls.small) }
                 DispatchQueue.main.async {
                     completion(.success(urls))
                 }

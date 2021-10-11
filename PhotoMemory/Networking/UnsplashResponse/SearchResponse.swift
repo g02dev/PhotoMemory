@@ -7,7 +7,7 @@ struct SearchResponse: Codable {
     
     struct ImageResponse: Codable {
         struct ImageUrls: Codable {
-            let regular: String
+            let small: String  // 400 pixels
         }
         
         let urls: ImageUrls
