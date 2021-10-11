@@ -37,6 +37,7 @@ struct Constants {
         static let settingCell = "SettingCell"
         static let difficultyCell = "DifficultyCell"
         static let themeCell = "ThemeCell"
+        static let noCustmomThemesCell = "NoCustomThemesCell"
         static let gameCardCell = "GameCardCell"
         static let themeColorCell = "ThemeColorCell"
         static let themeNewImageCell = "ThemeNewImageCell"

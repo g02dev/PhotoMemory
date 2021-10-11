@@ -8,6 +8,14 @@ class ThemeSelectionTableViewController: UITableViewController {
     // MARK: - Constants and variables
     
     private var fetchResultsController: NSFetchedResultsController<UserTheme>!
+    
+    private var numberOfCustomThemes: Int {
+        return fetchResultsController.sections?[0].numberOfObjects ?? 0
+    }
+    
+    private var hasCustomThemes: Bool {
+        return numberOfCustomThemes > 0
+    }
   
     
     // MARK: - Lifecycle
@@ -15,7 +23,7 @@ class ThemeSelectionTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.rowHeight = 100
+        tableView.estimatedRowHeight = 100
         setFetchResultController()
     }
     
@@ -48,30 +56,35 @@ class ThemeSelectionTableViewController: UITableViewController {
         case 0:
             return DefaultThemes.allCases.count
         case 1:
-            return fetchResultsController.sections?[0].numberOfObjects ?? 0
+            return hasCustomThemes ? numberOfCustomThemes : 1
         default:
             return 0
         }
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.ReuseId.themeCell, for: indexPath) as! ThemeTableViewCell
-        
         switch indexPath.section {
         case 0:
+            let cell = tableView.dequeueReusableCell(withIdentifier: Constants.ReuseId.themeCell, for: indexPath) as! ThemeTableViewCell
             let theme = DefaultThemes.allCases[indexPath.row].theme
             cell.theme = theme
             cell.isSelectedTheme = theme == Defaults.theme
+            return cell
         case 1:
-            let fetcherIndexPath = IndexPath(row: indexPath.row, section: 0)
-            let theme = fetchResultsController.object(at: fetcherIndexPath).theme
-            cell.theme = theme
-            cell.isSelectedTheme = theme == Defaults.theme
+            if hasCustomThemes {
+                let cell = tableView.dequeueReusableCell(withIdentifier: Constants.ReuseId.themeCell, for: indexPath) as! ThemeTableViewCell
+                let fetcherIndexPath = IndexPath(row: indexPath.row, section: 0)
+                let theme = fetchResultsController.object(at: fetcherIndexPath).theme
+                cell.theme = theme
+                cell.isSelectedTheme = theme == Defaults.theme
+                return cell
+            } else {
+                let cell = tableView.dequeueReusableCell(withIdentifier: Constants.ReuseId.noCustmomThemesCell, for: indexPath)
+                return cell
+            }
         default:
             fatalError("Unknown section")
         }
-        return cell
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -88,6 +101,15 @@ class ThemeSelectionTableViewController: UITableViewController {
     
     // MARK: - Table view delegate
     
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        switch (indexPath.section, hasCustomThemes) {
+        case (1, false):
+            return 40
+        default:
+            return 100
+        }
+    }
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
         
@@ -96,6 +118,8 @@ class ThemeSelectionTableViewController: UITableViewController {
             let newTheme = DefaultThemes.allCases[indexPath.row].theme
             Defaults.theme = newTheme
         case 1:
+            guard hasCustomThemes else { return }
+            
             let fetcherIndexPath = IndexPath(row: indexPath.row, section: 0)
             let userTheme = fetchResultsController.object(at: fetcherIndexPath)
             let newTheme = userTheme.theme
@@ -111,6 +135,8 @@ class ThemeSelectionTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         switch indexPath.section {
         case 1:
+            guard hasCustomThemes else { return nil }
+            
             let fetcherIndexPath = IndexPath(row: indexPath.row, section: 0)
             let userTheme = fetchResultsController.object(at: fetcherIndexPath)
             let contextItem = UIContextualAction(style: .normal, title: "Edit") { [unowned self] (_, _, completion) in
@@ -126,6 +152,7 @@ class ThemeSelectionTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         switch indexPath.section {
         case 1:
+            guard hasCustomThemes else { return nil }
             
             let fetcherIndexPath = IndexPath(row: indexPath.row, section: 0)
             let userTheme = fetchResultsController.object(at: fetcherIndexPath)
