@@ -23,7 +23,7 @@ class ThemeSelectionTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.estimatedRowHeight = 100
+        tableView.rowHeight = 100
         setFetchResultController()
     }
     
@@ -100,15 +100,6 @@ class ThemeSelectionTableViewController: UITableViewController {
     
     
     // MARK: - Table view delegate
-    
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        switch (indexPath.section, hasCustomThemes) {
-        case (1, false):
-            return 40
-        default:
-            return 100
-        }
-    }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
