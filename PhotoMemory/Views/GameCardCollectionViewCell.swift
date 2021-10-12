@@ -21,7 +21,7 @@ class GameCardCollectionViewCell: UICollectionViewCell {
     var isMatched: Bool! {
         didSet {
             if isMatched {
-                contentView.backgroundColor = UIColor.lightGray
+                contentView.backgroundColor = UIColor.systemGray3
             } else {
                 contentView.backgroundColor = themeColor
             }
